@@ -197,11 +197,30 @@
           aria-live="polite"
           role="status"
         ></p>
-
+        {%- comment -%}
+        tabs 20181219 ksks
+        {%- endcomment -%}
         <div class="product-single__description rte">
-          {{ product.description }}
+          <div id="tabs">
+            <ul class="tabs">
+              <li><a href="#tab-1">Info</a></li>
+              <li><a href="#tab-2">Shipping</a></li>
+              <li><a href="#tab-3">Returns</a></li>
+            </ul>
+            <div id="tab-1">
+            {{ product.description }}
+            </div>
+            <div id="tab-2">
+            {% include 'shipping' %}
+            </div>
+            <div id="tab-3">
+            {{ pages.returns.content }}
+            </div>
+          </div>
         </div>
-
+        {%- comment -%}
+        tabs 20181219 ksks
+        {%- endcomment -%}
         {% if section.settings.show_share_buttons %}
           {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
         {% endif %}
@@ -398,3 +417,73 @@
   ]
 }
 {% endschema %}
+<style>
+ul.tabs {
+  border-bottom: 1px solid #DDDDDD;
+  display: block;
+  margin: 0 0 20px;
+  padding: 0;
+}
+ul.tabs li {
+  display: block;
+  float: left;
+  height: 30px;
+  margin-bottom: 0;
+  padding: 0;
+  width: auto;
+}
+ul.tabs li a {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: none repeat scroll 0 0 #F5F5F5;
+  border-color: #DDDDDD !important;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  display: block;
+  font-size: 13px;
+  height: 29px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0 20px;
+  text-decoration: none;
+  width: auto;
+  color: #303030;
+  border-bottom:none !important;
+}
+ul.tabs li a.active {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-left-width: 1px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  color: #111111;
+  height: 30px;
+  margin: 0 0 0 -1px;
+  padding-top: 4px;
+  position: relative;
+  top: -4px;
+}
+ul.tabs li:first-child a.active {
+  margin-left: 0;
+}
+ul.tabs li:first-child a {
+  border-top-left-radius: 2px;
+  border-width: 1px 1px 0;
+}
+ul.tabs li:last-child a {
+  border-top-right-radius: 2px;
+}
+ul.tabs:before, ul.tabs:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+}
+ul.tabs:after {
+  clear: both;
+}
+</style>
