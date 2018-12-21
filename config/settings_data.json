@@ -2,8 +2,8 @@
   "current": {
     "color_text": "#3d4246",
     "color_body_text": "#69727b",
-    "color_sale_text": "#557b97",
-    "color_button": "#557b97",
+    "color_sale_text": "#189dff",
+    "color_button": "#189dff",
     "color_button_text": "#fff",
     "color_small_button_text_border": "#3d4246",
     "color_text_field_text": "#000",
@@ -387,9 +387,9 @@
     "Default": {
       "color_text": "#3d4246",
       "color_body_text": "#69727b",
-      "color_sale_text": "#557B97",
+      "color_sale_text": "#189dff",
       "color_borders": "#e8e9eb",
-      "color_button": "#557B97",
+      "color_button": "#189dff",
       "color_button_text": "#fff",
       "color_small_button_text_border": "#3d4246",
       "color_text_field": "#fff",

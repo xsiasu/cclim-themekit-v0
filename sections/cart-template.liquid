@@ -144,7 +144,7 @@
           <div class="grid__item text-right small--text-center{% if section.settings.cart_notes_enable %} medium-up--one-half{% endif %}">
             <div>
               <span class="cart__subtotal-title">{{ 'cart.general.subtotal' | t }}</span>
-              <span class="cart__subtotal">{{ cart.total_price | money }}</span>
+              <span class="cart__subtotal"><span id="bk-cart-subtotal-price">{{ cart.total_price | money }}</span></span>
             </div>
             {% if cart.total_discounts > 0 %}
               <div class="cart__savings">

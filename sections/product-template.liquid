@@ -106,6 +106,7 @@
             </button>
           {% endif %}
         </div>
+
       {% endif %}
     </div>
 
@@ -419,18 +420,19 @@
 {% endschema %}
 <style>
 ul.tabs {
-  border-bottom: 1px solid #DDDDDD;
-  display: block;
+  display: table;
   margin: 0 0 20px;
   padding: 0;
+  width:100%
 }
 ul.tabs li {
-  display: block;
-  float: left;
-  height: 30px;
+  display: table-cell;
   margin-bottom: 0;
   padding: 0;
-  width: auto;
+  width: 33.3%;
+}
+ul.tabs li:last-child {
+  width:33.4%;
 }
 ul.tabs li a {
   -moz-border-bottom-colors: none;
@@ -438,36 +440,25 @@ ul.tabs li a {
   -moz-border-left-colors: none;
   -moz-border-right-colors: none;
   -moz-border-top-colors: none;
-  background: none repeat scroll 0 0 #F5F5F5;
-  border-color: #DDDDDD !important;
-  border-style: solid;
-  border-width: 1px 1px 0 1px;
   display: block;
-  font-size: 13px;
-  height: 29px;
-  line-height: 30px;
-  margin: 0;
-  padding: 0 20px;
+  font-size: 15px;
+  font-weight: 500;
+  height: 44px;
+  vertical-align:middle;
+  padding: 9px 15px;
   text-decoration: none;
-  width: auto;
   color: #303030;
+  background:#f1f2f2;
   border-bottom:none !important;
+  text-align:center
 }
 ul.tabs li a.active {
-  background: none repeat scroll 0 0 #FFFFFF;
-  border-left-width: 1px;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  color: #111111;
-  height: 30px;
-  margin: 0 0 0 -1px;
-  padding-top: 4px;
+  background-color: #189dff;
+  color: #fff;
   position: relative;
-  top: -4px;
+
 }
-ul.tabs li:first-child a.active {
-  margin-left: 0;
-}
+
 ul.tabs li:first-child a {
   border-top-left-radius: 2px;
   border-width: 1px 1px 0;
