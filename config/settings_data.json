@@ -65,7 +65,7 @@
       "hero": {
         "type": "hero",
         "settings": {
-          "image": "shopify:\/\/shop_images\/young-woman-in-sunglasses-with-rings.jpg",
+          "image": "shopify:\/\/shop_images\/ian-dooley-347962-unsplash_1024x1024_1024x1024_b49252b2-20c7-4d72-8260-6642046811c7.png",
           "alignment": "bottom",
           "title": "cclim",
           "text": "<p>You will be the best of world.<\/p>",
@@ -77,12 +77,13 @@
       },
       "featured-collections": {
         "type": "collection",
+        "disabled": true,
         "settings": {
           "title": "Featured collection",
           "collection": "frontpage",
           "grid": 4,
           "rows": 2,
-          "show_vendor": true,
+          "show_vendor": false,
           "show_view_all": true
         }
       },
@@ -147,7 +148,7 @@
           "image_size": "medium",
           "show_quantity_selector": true,
           "show_variant_labels": true,
-          "show_vendor": true,
+          "show_vendor": false,
           "enable_zoom": true,
           "enable_payment_button": true,
           "show_share_buttons": true
@@ -203,6 +204,7 @@
       },
       "1545276791523": {
         "type": "logo-bar",
+        "disabled": true,
         "blocks": {
           "1545276791523-0": {
             "type": "logo_image",
@@ -245,6 +247,7 @@
       },
       "1545636651530": {
         "type": "collection-list",
+        "disabled": true,
         "blocks": {
           "1545636651530-0": {
             "type": "featured_collection",
@@ -324,13 +327,124 @@
           "autorotate": false,
           "autorotate_speed": 5
         }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "blog_show_author": true,
+          "blog_show_date": true,
+          "show_share_buttons": true
+        }
+      },
+      "1545714467441": {
+        "type": "slideshow",
+        "blocks": {
+          "1545714467441-0": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "alignment": "center center",
+              "slide_title": "Image slide",
+              "subheading": "Tell your brand's story through images",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "1545714467441-1": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "alignment": "center center",
+              "slide_title": "Image slide",
+              "subheading": "Tell your brand's story through images",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1545714467441-0",
+          "1545714467441-1"
+        ],
+        "settings": {
+          "slideshow_height": "adapt",
+          "text_size": "medium",
+          "text_alignment": "center center",
+          "show_overlay": true,
+          "autorotate": false,
+          "autorotate_speed": 5
+        }
+      },
+      "1545724779606": {
+        "type": "feature-row",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/img_4_1024x1024_1024x1024_4d045bff-3ae2-4a0f-8e95-4c7b30c20fb9.png",
+          "layout": "left",
+          "title": "Black Suits",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+          "button_label": "shop now",
+          "button_link": "shopify:\/\/blogs\/news"
+        }
+      },
+      "1545724921014": {
+        "type": "image-bar",
+        "blocks": {
+          "1545724921014-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1_1024x1024_1024x1024_f45a97d2-5353-4f22-b894-bb2fbf6ca23e.png",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          },
+          "1545724921014-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2_1024x1024_1024x1024_04989130-1763-4b85-920c-4ab49b532f31.png",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          },
+          "1545724921014-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/3_1024x1024_1024x1024_f2064ed8-4d09-45a5-a14b-d97487899210.png",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          },
+          "1545724966378": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/4_1024x1024_1024x1024_8d4e98e8-74e8-4dd5-b05d-024e7c49499c.png",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          }
+        },
+        "block_order": [
+          "1545724921014-0",
+          "1545724921014-1",
+          "1545724921014-2",
+          "1545724966378"
+        ],
+        "settings": {
+          "section_height": "medium"
+        }
       }
     },
     "content_for_index": [
+      "1545724921014",
       "hero",
+      "1545724779606",
       "featured-collections",
       "1545276791523",
-      "1545636651530"
+      "1545636651530",
+      "1545714467441"
     ]
   },
   "presets": {
