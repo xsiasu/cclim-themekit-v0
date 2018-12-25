@@ -13,7 +13,7 @@
     "color_image_overlay": "#3d4246",
     "image_overlay_opacity": 40,
     "color_borders": "#e8e9eb",
-    "color_body_bg": "#fff",
+    "color_body_bg": "#fafafa",
     "type_header_font": "work_sans_n6",
     "type_header_base_size": 26,
     "type_base_font": "work_sans_n4",
@@ -33,11 +33,11 @@
     "social_vimeo_link": "",
     "favicon": "",
     "checkout_header_image": "",
-    "checkout_logo_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo_fba759fe-9256-4392-a3df-1993a64a0ad5.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "medium",
     "checkout_body_background_image": "",
-    "checkout_body_background_color": "#fff",
+    "checkout_body_background_color": "#ffffff",
     "checkout_input_background_color_mode": "white",
     "checkout_sidebar_background_image": "",
     "checkout_sidebar_background_color": "#fafafa",
@@ -51,7 +51,7 @@
         "type": "header",
         "settings": {
           "align_logo": "left",
-          "logo": "",
+          "logo": "shopify:\/\/shop_images\/logo_fba759fe-9256-4392-a3df-1993a64a0ad5.png",
           "logo_max_width": 245,
           "main_linklist": "main-menu",
           "message": false,
@@ -65,53 +65,14 @@
       "hero": {
         "type": "hero",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Hero_Desktop_Mea.jpg",
-          "alignment": "center",
-          "title": "Ray ban",
+          "image": "shopify:\/\/shop_images\/young-woman-in-sunglasses-with-rings.jpg",
+          "alignment": "bottom",
+          "title": "cclim",
           "text": "<p>You will be the best of world.<\/p>",
-          "hero_size": "large",
-          "text_size": "large",
-          "button_label": "view",
-          "button_link": "shopify:\/\/collections\/frontpage"
-        }
-      },
-      "slideshow": {
-        "type": "slideshow",
-        "blocks": {
-          "slideshow-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/young-woman-in-sunglasses-with-rings.jpg",
-              "alignment": "center center",
-              "slide_title": "Image slide",
-              "subheading": "Tell your brand's story through images",
-              "button_label": "",
-              "button_link": ""
-            }
-          },
-          "slideshow-1": {
-            "type": "image",
-            "settings": {
-              "image": "",
-              "alignment": "center center",
-              "slide_title": "Image slide",
-              "subheading": "Tell your brand's story through images",
-              "button_label": "",
-              "button_link": ""
-            }
-          }
-        },
-        "block_order": [
-          "slideshow-0",
-          "slideshow-1"
-        ],
-        "settings": {
-          "slideshow_height": "medium",
+          "hero_size": "medium",
           "text_size": "medium",
-          "text_alignment": "center center",
-          "show_overlay": true,
-          "autorotate": false,
-          "autorotate_speed": 5
+          "button_label": "Shop now",
+          "button_link": "shopify:\/\/collections\/frontpage"
         }
       },
       "featured-collections": {
@@ -119,21 +80,10 @@
         "settings": {
           "title": "Featured collection",
           "collection": "frontpage",
-          "grid": 3,
+          "grid": 4,
           "rows": 2,
-          "show_vendor": false,
-          "show_view_all": false
-        }
-      },
-      "feature-row": {
-        "type": "feature-row",
-        "settings": {
-          "image": "",
-          "layout": "left",
-          "title": "Image with text",
-          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-          "button_label": "",
-          "button_link": ""
+          "show_vendor": true,
+          "show_view_all": true
         }
       },
       "footer": {
@@ -174,9 +124,9 @@
           "newsletter"
         ],
         "settings": {
-          "show_payment_icons": false,
-          "color_footer_bg": "#f5f5f5",
-          "color_footer_text": "#3d4246"
+          "show_payment_icons": true,
+          "color_footer_bg": "#0099ff",
+          "color_footer_text": "#ffffff"
         }
       },
       "collection-template": {
@@ -251,85 +201,6 @@
           "blog_show_date": true
         }
       },
-      "1545276686328": {
-        "type": "slideshow",
-        "blocks": {
-          "1545276686328-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Hero_Desktop_Mea.jpg",
-              "alignment": "center center",
-              "slide_title": "Image slide",
-              "subheading": "Tell your brand's story through images",
-              "button_label": "",
-              "button_link": ""
-            }
-          },
-          "1545276686328-1": {
-            "type": "image",
-            "settings": {
-              "image": "",
-              "alignment": "center center",
-              "slide_title": "Image slide",
-              "subheading": "Tell your brand's story through images",
-              "button_label": "",
-              "button_link": ""
-            }
-          }
-        },
-        "block_order": [
-          "1545276686328-0",
-          "1545276686328-1"
-        ],
-        "settings": {
-          "slideshow_height": "large",
-          "text_size": "medium",
-          "text_alignment": "center center",
-          "show_overlay": true,
-          "autorotate": false,
-          "autorotate_speed": 5
-        }
-      },
-      "1545276744271": {
-        "type": "image-bar",
-        "blocks": {
-          "1545276744271-0": {
-            "type": "image",
-            "settings": {
-              "image": "",
-              "alignment": "center",
-              "link": "",
-              "cta_label": ""
-            }
-          },
-          "1545276744271-1": {
-            "type": "image",
-            "settings": {
-              "image": "",
-              "alignment": "center",
-              "link": "",
-              "cta_label": ""
-            }
-          },
-          "1545276744271-2": {
-            "type": "image",
-            "settings": {
-              "image": "",
-              "alignment": "center",
-              "link": "",
-              "cta_label": ""
-            }
-          }
-        },
-        "block_order": [
-          "1545276744271-0",
-          "1545276744271-1",
-          "1545276744271-2"
-        ],
-        "settings": {
-          "section_height": "small"
-        }
-      },
       "1545276791523": {
         "type": "logo-bar",
         "blocks": {
@@ -371,16 +242,95 @@
         "settings": {
           "title": "Logo list"
         }
+      },
+      "1545636651530": {
+        "type": "collection-list",
+        "blocks": {
+          "1545636651530-0": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "1545636651530-1": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "1545636651530-2": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          }
+        },
+        "block_order": [
+          "1545636651530-0",
+          "1545636651530-1",
+          "1545636651530-2"
+        ],
+        "settings": {
+          "title": "Collection list",
+          "grid": 3
+        }
+      },
+      "feature-row": {
+        "type": "feature-row",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/45977138_2233028120312099_4971711950455286688_n.jpg",
+          "layout": "left",
+          "title": "Image with text",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "slideshow-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/young-woman-in-sunglasses-with-rings.jpg",
+              "alignment": "center center",
+              "slide_title": "Image slide",
+              "subheading": "Tell your brand's story through images",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "slideshow-1": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "alignment": "center center",
+              "slide_title": "Image slide",
+              "subheading": "Tell your brand's story through images",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "slideshow-0",
+          "slideshow-1"
+        ],
+        "settings": {
+          "slideshow_height": "medium",
+          "text_size": "medium",
+          "text_alignment": "center center",
+          "show_overlay": true,
+          "autorotate": false,
+          "autorotate_speed": 5
+        }
       }
     },
     "content_for_index": [
       "hero",
       "featured-collections",
-      "feature-row",
-      "slideshow",
-      "1545276686328",
-      "1545276744271",
-      "1545276791523"
+      "1545276791523",
+      "1545636651530"
     ]
   },
   "presets": {

@@ -333,7 +333,8 @@ $grid-breakpoint-has-widths: ($small, $medium-up);
 $grid-breakpoint-has-push: ($small, $medium-up);
 
 /*================ Color Variables ================*/
-
+// bg color
+$color-body-header : #fff;
 // Text colors
 $color-text: {{ settings.color_text }};
 $color-text-shadow: rgba(0,0,0,0.4);
@@ -1795,7 +1796,11 @@ a[href^="tel"] {
   @include media-query($medium-up) {
     padding: $input-padding-top-bottom $input-padding-left-right;
   }
-
+    @include media-query($small) {//ksk
+      &.return-link {
+        width:100%
+      }
+    }
   &:not([disabled]):hover,
   &:focus {
     color: $color-btn-primary-text;
@@ -2796,6 +2801,8 @@ hr {
   margin: 0 auto $grid-gutter / 2;
   position: relative;
   width: 100%;
+  border:solid 1px #e6e6e6; //ksk
+  border-radius:3px; //ksk
 }
 
 .grid-view-item__image {
@@ -3354,7 +3361,6 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
     @extend .btn;
     @extend .product-form__cart-submit;
     margin-bottom: 10px;
-
     &:hover {
       background-color: $color-btn-primary-focus !important;
     }
@@ -3439,7 +3445,13 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
     margin-top: $grid-gutter;
   }
 }
-
+.product-single__frame {//ksk 
+  border:solid 1px #e6e6e6;
+  border-radius:3px;
+  @include media-query ($small) {
+    margin: 0 -23px
+  }
+}
 @include media-query ($small) {
   .product-single__photos {
     margin-bottom: $grid-gutter;
@@ -3929,14 +3941,16 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 
 
 /*================ MODULES ================*/
+.breadcrumb .here {color:#189dff}
 .site-header {
-  background-color: $color-body;
+  background-color: $color-body-header;
   position: relative;
   padding: 0 $gutter-site;
 
   @include media-query($small) {
     border-bottom: 1px solid $color-border;
     padding: 0;
+    height:52px;
   }
 
   @include media-query($medium-up) {
@@ -3969,7 +3983,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 
 .site-header__logo {
   margin: 15px 0;
-
+  width:100px;
   .logo-align--center & {
     text-align: center;
     margin: 0 auto;
@@ -4405,7 +4419,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
     vertical-align: middle;
     width: 16px;
     height: 16px;
-    margin-right: 4px;
+    margin-right: 0;
   }
 
   .icon-facebook {
@@ -4760,7 +4774,7 @@ $nav-button-padding: 15px;
 .site-header__mobile-nav {
   z-index: 999;
   position: relative;
-  background-color: $color-body;
+  background-color: $color-body-header;
 
   @include media-query($small) {
     @include display-flexbox();

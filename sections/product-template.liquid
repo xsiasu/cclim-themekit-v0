@@ -40,6 +40,7 @@
 
   <div class="grid product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.image_size }}-image{% endif %}">
     <div class="grid__item product-single__photos {{ product_image_width }}{% if section.settings.image_size == 'full' %} product-single__photos--full{% endif %}">
+      <div class="product-single__frame">
       {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
       {% for image in product.images %}
         {% capture img_id %}FeaturedImage-{{ section.id }}-{{ image.id }}{% endcapture %}
@@ -108,9 +109,11 @@
         </div>
 
       {% endif %}
+      </div>
     </div>
 
     <div class="grid__item {{ product_description_width }}">
+      {% include 'breadcrumbs' %}
       <div class="product-single__meta">
 
         <h1 class="product-single__title">{{ product.title }}</h1>
