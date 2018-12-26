@@ -77,7 +77,6 @@
       },
       "featured-collections": {
         "type": "collection",
-        "disabled": true,
         "settings": {
           "title": "Featured collection",
           "collection": "frontpage",
@@ -342,10 +341,10 @@
           "1545714467441-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/blacksuits-header1.jpg",
+              "image": "shopify:\/\/shop_images\/blacksuits-header2.jpg",
               "alignment": "center center",
-              "slide_title": "Image slide",
-              "subheading": "Tell your brand's story through images",
+              "slide_title": "Black suit",
+              "subheading": "Pair large text with an image to give focus to your  chosen product, collection, or blog post. Add details on  availability, style, or even provide a review.",
               "button_label": "Shop now",
               "button_link": "shopify:\/\/collections\/all"
             }
@@ -353,10 +352,10 @@
           "1545714467441-1": {
             "type": "image",
             "settings": {
-              "image": "",
+              "image": "shopify:\/\/shop_images\/blacksuits-header2.jpg",
               "alignment": "center center",
               "slide_title": "Image slide",
-              "subheading": "Tell your brand's story through images",
+              "subheading": "Pair large text with an image to give focus to your  chosen product, collection, or blog post. Add details on  availability, style, or even provide a review.",
               "button_label": "",
               "button_link": ""
             }
@@ -369,14 +368,15 @@
         "settings": {
           "slideshow_height": "small",
           "text_size": "medium",
-          "text_alignment": "center center",
-          "show_overlay": true,
-          "autorotate": false,
+          "text_alignment": "left bottom",
+          "show_overlay": false,
+          "autorotate": true,
           "autorotate_speed": 5
         }
       },
       "1545724779606": {
         "type": "feature-row",
+        "disabled": true,
         "settings": {
           "image": "shopify:\/\/shop_images\/img_4_1024x1024_1024x1024_4d045bff-3ae2-4a0f-8e95-4c7b30c20fb9.png",
           "layout": "left",
@@ -404,9 +404,9 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/2_1024x1024_1024x1024_04989130-1763-4b85-920c-4ab49b532f31.png",
               "alignment": "center",
-              "link": "",
-              "cta_label": "",
-              "button_label": ""
+              "link": "shopify:\/\/products\/copy-of-aviator",
+              "cta_label": "sunglasses",
+              "button_label": "shop now"
             }
           },
           "1545724921014-2": {
@@ -414,9 +414,9 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/3_1024x1024_1024x1024_f2064ed8-4d09-45a5-a14b-d97487899210.png",
               "alignment": "center",
-              "link": "",
-              "cta_label": "",
-              "button_label": ""
+              "link": "shopify:\/\/products\/copy-of-copy-of-aviator",
+              "cta_label": "glasses",
+              "button_label": "shop now"
             }
           },
           "1545724966378": {
@@ -424,9 +424,9 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/4_1024x1024_1024x1024_8d4e98e8-74e8-4dd5-b05d-024e7c49499c.png",
               "alignment": "center",
-              "link": "",
-              "cta_label": "",
-              "button_label": ""
+              "link": "shopify:\/\/products\/copy-of-aviator",
+              "cta_label": "cap",
+              "button_label": "shop now"
             }
           }
         },
@@ -456,10 +456,10 @@
       "1545724921014",
       "hero",
       "1545724779606",
+      "1545714467441",
       "featured-collections",
       "1545276791523",
       "1545636651530",
-      "1545714467441",
       "1545792231670"
     ]
   },

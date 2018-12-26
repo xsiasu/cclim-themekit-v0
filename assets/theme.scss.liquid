@@ -983,6 +983,18 @@ $grid-breakpoints: (
   }
 }
 
+.grid__item--apple {
+  float: left;
+  padding-left: 0;
+  width: 100%;
+  @include media-query($small) {
+    padding-left: $grid-gutter-mobile;
+  }
+
+  &[class*="--push"] {
+    position: relative;
+  }
+}
 /*============================================================================
   Reversed grids allow you to structure your source in the opposite
   order to how your rendered layout will appear.
@@ -2809,6 +2821,12 @@ hr {
   border:solid 1px #e6e6e6; //ksk
   border-radius:3px; //ksk
 }
+.grid-view-item__image-wrapper--apple {
+  margin: 0 auto $grid-gutter / 2;
+  position: relative;
+  width: 100%;
+}
+
 
 .grid-view-item__image {
   display: block;
