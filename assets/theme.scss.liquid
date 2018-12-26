@@ -1274,7 +1274,12 @@ html {
   max-width: $width-site;
   margin: 0 auto;
 }
-
+// ksk
+.page-width-full {
+  @include clearfix();
+  max-width: $width-site;
+  margin: 0 auto;
+}
 .main-content {
   display: block;
   padding-top: $section-spacing-small;
@@ -2408,7 +2413,7 @@ textarea {
   position: relative;
   padding: 0;
   text-align: center;
-  margin: 25px 0;
+  margin: 15px 0;
 
   a {
     padding: 3px 10px;
@@ -3983,7 +3988,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 
 .site-header__logo {
   margin: 15px 0;
-  width:100px;
+  width:75px;
   .logo-align--center & {
     text-align: center;
     margin: 0 auto;

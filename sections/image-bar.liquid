@@ -35,9 +35,18 @@
 
         {% if block.settings.cta_label != blank %}
           <div class="image-bar__text">
-            <h3 class="image-bar__caption">{{ block.settings.cta_label | escape }}</h3>
+            <h3 class="image-bar__caption">{{ block.settings.cta_label | escape }}</h3>         
           </div>
         {% endif %}
+        {% comment %}
+        ksk
+        {% endcomment %}
+        {% if block.settings.button_label != blank %}
+            <span class="btn">{{block.settings.button_label | escape }}</span>                        
+        {% endif %}
+        {% comment %}
+        ksk
+        {% endcomment %}
       </div>
       {% if block.settings.link != blank %}
         </div>
@@ -263,7 +272,20 @@
             "ja": "キャプション",
             "pt-BR": "Legenda"
           }
-        }
+        },                  
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": {
+            "de": "Button-Name",
+            "en": "Button label",
+            "es": "Etiqueta de botón",
+            "fr": "Texte du bouton",
+            "it": "Etichetta pulsante",
+            "ja": "ボタンラベル",
+            "pt-BR": "Etiqueta do botão"
+          }
+        }        
       ]
     }
   ],

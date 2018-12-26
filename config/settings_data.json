@@ -394,8 +394,8 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/1_1024x1024_1024x1024_f45a97d2-5353-4f22-b894-bb2fbf6ca23e.png",
               "alignment": "center",
-              "link": "",
-              "cta_label": ""
+              "link": "shopify:\/\/collections\/all",
+              "cta_label": "black suits"
             }
           },
           "1545724921014-1": {
