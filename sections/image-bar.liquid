@@ -13,7 +13,7 @@
   {% for block in section.blocks %}
     <div class="grid__item {{ column_size }} js" {{ block.shopify_attributes }}>
       {% if block.settings.link != blank %}
-        <a class="image-bar__link" href="{{ block.settings.link }}">
+        <div class="image-bar__link" >
           <div class="image-bar__item box ratio-container lazyload"
                data-bgset="{% include 'bgset', image: block.settings.image %}"
                data-sizes="auto"
@@ -32,25 +32,23 @@
         {% if block.settings.image == blank %}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         {% endif %}
-
-        {% if block.settings.cta_label != blank %}
-          <div class="image-bar__text">
-            <h3 class="image-bar__caption">{{ block.settings.cta_label | escape }}</h3>         
-          </div>
-        {% endif %}
-        {% comment %}
-        ksk
-        {% endcomment %}
-        {% if block.settings.button_label != blank %}
-            <span class="btn">{{block.settings.button_label | escape }}</span>                        
-        {% endif %}
-        {% comment %}
-        ksk
-        {% endcomment %}
+        <div class="image-bar__text">
+          {% if block.settings.cta_label != blank %}  
+              <h3 class="image-bar__caption">{{ block.settings.cta_label | escape }}</h3>         
+          {% endif %}
+          {% if block.settings.button_label != blank %}
+            <div class="image-bar__button">
+              <a class="btn" href="{{ block.settings.link }}">{{block.settings.button_label | escape }}</a>                        
+            </div>
+          {% endif %}
+          {% comment %}
+          ksk
+          {% endcomment %}
+        </div>        
       </div>
       {% if block.settings.link != blank %}
         </div>
-        </a>
+        </div>
       {% else %}
         </div>
       {% endif %}

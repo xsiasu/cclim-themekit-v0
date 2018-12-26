@@ -342,12 +342,12 @@
           "1545714467441-0": {
             "type": "image",
             "settings": {
-              "image": "",
+              "image": "shopify:\/\/shop_images\/blacksuits-header1.jpg",
               "alignment": "center center",
               "slide_title": "Image slide",
               "subheading": "Tell your brand's story through images",
-              "button_label": "",
-              "button_link": ""
+              "button_label": "Shop now",
+              "button_link": "shopify:\/\/collections\/all"
             }
           },
           "1545714467441-1": {
@@ -367,7 +367,7 @@
           "1545714467441-1"
         ],
         "settings": {
-          "slideshow_height": "adapt",
+          "slideshow_height": "small",
           "text_size": "medium",
           "text_alignment": "center center",
           "show_overlay": true,
@@ -395,7 +395,8 @@
               "image": "shopify:\/\/shop_images\/1_1024x1024_1024x1024_f45a97d2-5353-4f22-b894-bb2fbf6ca23e.png",
               "alignment": "center",
               "link": "shopify:\/\/collections\/all",
-              "cta_label": "black suits"
+              "cta_label": "black suits",
+              "button_label": "Shop now"
             }
           },
           "1545724921014-1": {
@@ -404,7 +405,8 @@
               "image": "shopify:\/\/shop_images\/2_1024x1024_1024x1024_04989130-1763-4b85-920c-4ab49b532f31.png",
               "alignment": "center",
               "link": "",
-              "cta_label": ""
+              "cta_label": "",
+              "button_label": ""
             }
           },
           "1545724921014-2": {
@@ -413,7 +415,8 @@
               "image": "shopify:\/\/shop_images\/3_1024x1024_1024x1024_f2064ed8-4d09-45a5-a14b-d97487899210.png",
               "alignment": "center",
               "link": "",
-              "cta_label": ""
+              "cta_label": "",
+              "button_label": ""
             }
           },
           "1545724966378": {
@@ -422,7 +425,8 @@
               "image": "shopify:\/\/shop_images\/4_1024x1024_1024x1024_8d4e98e8-74e8-4dd5-b05d-024e7c49499c.png",
               "alignment": "center",
               "link": "",
-              "cta_label": ""
+              "cta_label": "",
+              "button_label": ""
             }
           }
         },
@@ -435,6 +439,17 @@
         "settings": {
           "section_height": "medium"
         }
+      },
+      "1545792231670": {
+        "type": "collection",
+        "settings": {
+          "title": "Featured collection",
+          "collection": "frontpage",
+          "grid": 3,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": false
+        }
       }
     },
     "content_for_index": [
@@ -444,7 +459,8 @@
       "featured-collections",
       "1545276791523",
       "1545636651530",
-      "1545714467441"
+      "1545714467441",
+      "1545792231670"
     ]
   },
   "presets": {

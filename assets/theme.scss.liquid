@@ -3040,6 +3040,10 @@ $slick-dot-size-small: 10px;
 }
 
 /*================ Index sections ================*/
+.template-index .main-content{     
+    *zoom: 1;
+    max-width: 1200px;
+    margin: 0 auto}
 .index-section {
   padding-top: $section-spacing-small;
   padding-bottom: $section-spacing-small;
@@ -4909,7 +4913,7 @@ $transition-controls-slideshow: color 0.2s $ease-transition, background-color 0.
 }
 
 .slideshow--small {
-  height: $slideshow-height-small - 300;
+  height: $slideshow-height-small - 150;
 
   @include media-query($medium-up) {
     height: $slideshow-height-small;
@@ -4972,11 +4976,13 @@ $transition-controls-slideshow: color 0.2s $ease-transition, background-color 0.
   background-position: center center;
   background-color: transparent;
   z-index: $z-index-slideshow-image;
-
   .slick-initialized &,
   .no-js & {
     opacity: 1;
   }
+  @include media-query($small) {
+    background-size:cover
+  }  
 }
 
 /*================ Slide text ================*/
@@ -5823,6 +5829,9 @@ $toolbar-height-small: 46px;
   height: 475px;
   display: table;
   width: 100%;
+  margin-top:25px;
+  border:solid 1px #e6e6e6;
+  border-radius:3px;
   background: {
     size: cover;
     repeat: no-repeat;
@@ -6160,7 +6169,9 @@ $toolbar-height-small: 46px;
 
 .image-bar {
   overflow: hidden;
-
+  margin-top:25px;
+  border: solid 1px #e6e6e6;
+  border-radius:3px;
   @include media-query($small) {
     max-width: 400px;
     margin: 0 auto;
@@ -6245,16 +6256,27 @@ $toolbar-height-small: 46px;
 .image-bar__overlay {
   @include overlay;
 }
-
-.image-bar__caption {
+.image-bar__text {
   position: absolute;
-  top: 50%;
-  @include transform(translateY(-50%));
-  transition: $transition-link-hover;
+  bottom: 10%;
   width: 100%;
   text-align: center;
-  text-shadow: 0 0 4px $color-text-shadow;
+  .image-bar__caption {
+    @include transform(translateY(-50%));
+    transition: $transition-link-hover;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 4px $color-text-shadow;
+  }
+  .image-bar__button {
+    width:100%;
+    text-align:center;
+    a{
+      position:relative;
+    }
+  }    
 }
+
 
 .collection-grid {
   margin-bottom: -$gutter-site-mobile;
