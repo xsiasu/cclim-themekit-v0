@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="{{ settings.color_button }}">
+  <meta name="theme-color" content="{{ settings.color_button }}">  
   <link rel="canonical" href="{{ canonical_url }}">
 
   {%- if settings.favicon != blank -%}
@@ -70,7 +70,6 @@
   <script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>
   <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
-
   {{ content_for_header }}
 </head>
 
@@ -101,7 +100,10 @@
   {% section 'header' %}
   
   <div class="page-container" id="PageContainer">
-    
+
+    <div class="page-width-full">
+      {% include 'breadcrumbs' %}  
+    </div>
     <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>

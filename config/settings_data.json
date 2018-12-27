@@ -80,7 +80,7 @@
         "settings": {
           "title": "Featured collection",
           "collection": "frontpage",
-          "grid": 4,
+          "grid": 3,
           "rows": 2,
           "show_vendor": false,
           "show_view_all": true
@@ -203,7 +203,6 @@
       },
       "1545276791523": {
         "type": "logo-bar",
-        "disabled": true,
         "blocks": {
           "1545276791523-0": {
             "type": "logo_image",
@@ -242,39 +241,6 @@
         ],
         "settings": {
           "title": "Logo list"
-        }
-      },
-      "1545636651530": {
-        "type": "collection-list",
-        "disabled": true,
-        "blocks": {
-          "1545636651530-0": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": ""
-            }
-          },
-          "1545636651530-1": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": ""
-            }
-          },
-          "1545636651530-2": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": ""
-            }
-          }
-        },
-        "block_order": [
-          "1545636651530-0",
-          "1545636651530-1",
-          "1545636651530-2"
-        ],
-        "settings": {
-          "title": "Collection list",
-          "grid": 3
         }
       },
       "feature-row": {
@@ -450,6 +416,17 @@
           "show_vendor": false,
           "show_view_all": false
         }
+      },
+      "1545811899792": {
+        "type": "collection",
+        "settings": {
+          "title": "collection apple",
+          "collection": "frontpage",
+          "grid": 3,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": false
+        }
       }
     },
     "content_for_index": [
@@ -458,9 +435,9 @@
       "1545724779606",
       "1545714467441",
       "featured-collections",
+      "1545792231670",
       "1545276791523",
-      "1545636651530",
-      "1545792231670"
+      "1545811899792"
     ]
   },
   "presets": {

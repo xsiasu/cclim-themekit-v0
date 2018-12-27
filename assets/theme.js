@@ -1418,8 +1418,8 @@ theme.Search = (function() {
       var searchOffset = $(selectors.siteHeader).offset().top - searchHeight;
 
       $(selectors.searchDrawer).css({
-        height: searchHeight + 'px',
-        top: searchOffset + 'px'
+        height: 100 + 'vh',
+        top: -100 + 'vh'
       });
     });
   }

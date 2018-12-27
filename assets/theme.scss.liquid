@@ -983,12 +983,17 @@ $grid-breakpoints: (
   }
 }
 
-.grid__item--apple {
+.grid__item-apple {
   float: left;
   padding-left: 0;
+  border-right:solid 1px #e6e6e6;
+  border-bottom:solid 1px #e6e6e6;
   width: 100%;
+  &:nth-child(3n) {border-right:0}
   @include media-query($small) {
     padding-left: $grid-gutter-mobile;
+    &:nth-child(3n) {border-right:solid 1px #e6e6e6}
+    &:nth-child(2n) {border-right:0}
   }
 
   &[class*="--push"] {
@@ -1381,9 +1386,9 @@ h4,
 h5,
 h6 {
   margin: 0 0 ($section-spacing-small / 2);
-  font-family: $font-stack-header;
+  font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-style: $font-style-header;
-  font-weight: $font-weight-header;
+  font-weight: 400;
   line-height: 1.2;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -2702,7 +2707,7 @@ hr {
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   z-index: $z-index-drawer;
-  background-color: $color-bg;
+  background-color: rgba(255,255,255,.8);
   transition: $transition-drawer;
 
   input[type="text"],
@@ -2769,6 +2774,7 @@ hr {
 }
 
 .grid--view-items {
+  border-top:solid 1px #e6e6e6;
   overflow: auto;
   margin-bottom: -$section-spacing-small;
 }
@@ -2818,8 +2824,6 @@ hr {
   margin: 0 auto $grid-gutter / 2;
   position: relative;
   width: 100%;
-  border:solid 1px #e6e6e6; //ksk
-  border-radius:3px; //ksk
 }
 .grid-view-item__image-wrapper--apple {
   margin: 0 auto $grid-gutter / 2;
@@ -5348,7 +5352,8 @@ $transition-controls-slideshow: color 0.2s $ease-transition, background-color 0.
   @include flex-wrap(wrap);
   margin-top: 0;
   margin-bottom: 0;
-
+  font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight:400;
   @include media-query($small) {
     font-size: em($font-size-base - 1);
   }
@@ -6191,7 +6196,8 @@ $toolbar-height-small: 46px;
   border: solid 1px #e6e6e6;
   border-radius:3px;
   @include media-query($small) {
-    max-width: 400px;
+    border: 0;
+    border-radius:0;
     margin: 0 auto;
   }
 }
