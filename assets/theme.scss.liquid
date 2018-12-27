@@ -1292,6 +1292,16 @@ html {
   margin: 0 auto;
 }
 // ksk
+.page-width-filter {
+  @include clearfix();
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left:200px;
+  background:#ccc;
+  @include media-query($small) {
+    padding-left: 0;
+  }  
+}
 .page-width-full {
   @include clearfix();
   max-width: $width-site;

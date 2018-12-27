@@ -86,7 +86,11 @@
             <div class="filters-toolbar__item-wrapper">
               {% if section.settings.tags_enable and is_vendor_or_type_collection == false %}
                 {% unless collection.all_tags.size == 0 %}
-                  <div class="filters-toolbar__item-child">
+
+                  {%- comment -%}
+                  mobile
+                  {%- endcomment -%}
+                  <div class="filters-toolbar__item-child medium-up--hide">
                     <label class="filters-toolbar__label select-label" for="FilterTags">{{ 'collections.filters.title_tags' | t }}</label>
                     <div class="filters-toolbar__input-wrapper select-group">
                       <select class="filters-toolbar__input hidden" name="FilterTags" id="FilterTags" aria-describedby="a11y-refresh-page-message">
@@ -108,6 +112,37 @@
                       {% include 'icon-chevron-down' %}
                     </div>
                   </div>
+
+
+                  {%- comment -%}
+                  pc
+                  {%- endcomment -%}
+                  <div class="filters-toolbar__item-child small--hide">
+                    <label class="filters-toolbar__label select-label" for="FilterTags">{{ 'collections.filters.title_tags' | t }}{% include 'icon-chevron-down' %}</label>
+                    <div class="filters-toolbar__input-wrapper select-group">
+                      <div class="filters-toolbar-bx" name="FilterTags" id="FilterTags" aria-describedby="a11y-refresh-page-message">
+                        <ul>
+                          {% if current_tags %}
+                            {% if collection.handle %}
+                              <li><a href="/collections/{{ collection.handle }}">{{ 'collections.filters.all_tags' | t }}</a></li>
+                            {% elsif collection.current_type %}
+                              <li><a href="{{ collection.current_type | url_for_type }}">{{ 'collections.filters.all_tags' | t }}</a></li>
+                            {% elsif collection.current_vendor %}
+                              <li><a href="{{ collection.current_vendor | url_for_vendor }}">{{ 'collections.filters.all_tags' | t }}</a></li>
+                            {% endif %}
+                          {% else %}
+                            <li><a href="">{{ 'collections.filters.all_tags' | t }}</a></li>
+                          {% endif %}
+                          {% for tag in collection.all_tags %}
+                            <li><a href="/collections/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}"{% if current_tags contains tag %} selected="selected"{% endif %}>{{ tag }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                      
+                    </div>
+                  </div>
+
+
                 {% endunless %}
               {% endif %}
 
@@ -142,7 +177,7 @@
     {% endif %}
   </header>
 
-  <div class="page-width" id="Collection">
+  <div class="page-width-filter" id="Collection">
     {% if section.settings.layout == 'grid' %}
       {% case section.settings.grid %}
       {% when 2 %}
@@ -157,7 +192,7 @@
 
       <ul class="grid grid--uniform{% if collection.products_count > 0 %} grid--view-items{% endif %}">
         {% for product in collection.products %}
-          <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
+          <li class="grid__item-apple grid__item--{{section.id}} {{ grid_item_width }}">
             {% include 'product-card-grid', max_height: max_height %}
           </li>
         {% else %}
@@ -243,10 +278,11 @@
       </div>
     {% endif %}
 
+
+  </div>
     {% if paginate.pages > 1 %}
       {% include 'pagination' %}
-    {% endif %}
-  </div>
+    {% endif %}  
 </div>
 
 {% endpaginate %}
