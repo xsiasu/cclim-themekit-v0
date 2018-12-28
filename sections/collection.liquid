@@ -32,7 +32,7 @@
 
   {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
 
-  <ul class="grid grid--uniform grid--view-items">
+  <ul class="grid-apple grid--uniform grid--view-items">
     {% for product in collection.products limit: product_limit %}
       <li class="grid__item-apple grid__item--{{section.id}} {{ grid_item_width }}">
         {% include 'product-card-grid', max_height: max_height %}

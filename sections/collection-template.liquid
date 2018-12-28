@@ -118,28 +118,7 @@
                   pc
                   {%- endcomment -%}
                   <div class="filters-toolbar__item-child small--hide">
-                    <label class="filters-toolbar__label select-label" for="FilterTags">{{ 'collections.filters.title_tags' | t }}{% include 'icon-chevron-down' %}</label>
-                    <div class="filters-toolbar__input-wrapper select-group">
-                      <div class="filters-toolbar-bx" name="FilterTags" id="FilterTags" aria-describedby="a11y-refresh-page-message">
-                        <ul>
-                          {% if current_tags %}
-                            {% if collection.handle %}
-                              <li><a href="/collections/{{ collection.handle }}">{{ 'collections.filters.all_tags' | t }}</a></li>
-                            {% elsif collection.current_type %}
-                              <li><a href="{{ collection.current_type | url_for_type }}">{{ 'collections.filters.all_tags' | t }}</a></li>
-                            {% elsif collection.current_vendor %}
-                              <li><a href="{{ collection.current_vendor | url_for_vendor }}">{{ 'collections.filters.all_tags' | t }}</a></li>
-                            {% endif %}
-                          {% else %}
-                            <li><a href="">{{ 'collections.filters.all_tags' | t }}</a></li>
-                          {% endif %}
-                          {% for tag in collection.all_tags %}
-                            <li><a href="/collections/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}"{% if current_tags contains tag %} selected="selected"{% endif %}>{{ tag }}</a></li>
-                          {% endfor %}
-                        </ul>
-                      </div>
-                      
-                    </div>
+                    <button class="filters-toolbar__button">Filter</button>
                   </div>
 
 
@@ -178,6 +157,26 @@
   </header>
 
   <div class="page-width-filter" id="Collection">
+
+                      <div class="filters-toolbar-bx small--hide" name="FilterTags" id="FilterTags" aria-describedby="a11y-refresh-page-message">
+                        <ul>
+                          {% if current_tags %}
+                            {% if collection.handle %}
+                              <li><a href="/collections/{{ collection.handle }}">{{ 'collections.filters.all_tags' | t }}</a></li>
+                            {% elsif collection.current_type %}
+                              <li><a href="{{ collection.current_type | url_for_type }}">{{ 'collections.filters.all_tags' | t }}</a></li>
+                            {% elsif collection.current_vendor %}
+                              <li><a href="{{ collection.current_vendor | url_for_vendor }}">{{ 'collections.filters.all_tags' | t }}</a></li>
+                            {% endif %}
+                          {% else %}
+                            <li><a href="">{{ 'collections.filters.all_tags' | t }}</a></li>
+                          {% endif %}
+                          {% for tag in collection.all_tags %}
+                            <li><a href="/collections/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}"{% if current_tags contains tag %} selected="selected"{% endif %}>{{ tag }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+
     {% if section.settings.layout == 'grid' %}
       {% case section.settings.grid %}
       {% when 2 %}
@@ -190,7 +189,7 @@
         {%- assign grid_item_width = 'small--one-half medium-up--one-fifth' -%}
       {% endcase %}
 
-      <ul class="grid grid--uniform{% if collection.products_count > 0 %} grid--view-items{% endif %}">
+      <ul class="grid-apple grid--uniform{% if collection.products_count > 0 %} grid--view-items{% endif %}">
         {% for product in collection.products %}
           <li class="grid__item-apple grid__item--{{section.id}} {{ grid_item_width }}">
             {% include 'product-card-grid', max_height: max_height %}
@@ -283,6 +282,9 @@
     {% if paginate.pages > 1 %}
       {% include 'pagination' %}
     {% endif %}  
+
+
+    <a href="#" class="btn" id="ajax">ajax test</a>
 </div>
 
 {% endpaginate %}
@@ -434,3 +436,15 @@
   ]
 }
 {% endschema %}
+<script>
+    jQuery.getJSON('/admin/products.json', function(product) {
+      console.log('The title of this product is ' + product.title);
+    });
+
+
+    
+    jQuery('.filters-toolbar__button').click(function(){
+      let target = jQuery('.page-width-filter');
+      $(this).toggleClass( "active" );
+    })
+</script>

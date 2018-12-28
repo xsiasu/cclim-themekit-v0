@@ -54,12 +54,12 @@
           "logo": "shopify:\/\/shop_images\/logo_fba759fe-9256-4392-a3df-1993a64a0ad5.png",
           "logo_max_width": 245,
           "main_linklist": "main-menu",
-          "message": false,
+          "message": true,
           "home_page_only": true,
           "message_text": "Announce something here",
-          "message_link": "",
-          "color_bg": "#7796a8",
-          "color_text": "#fff"
+          "message_link": "shopify:\/\/collections\/all",
+          "color_bg": "#189dff",
+          "color_text": "#ffffff"
         }
       },
       "hero": {
@@ -73,17 +73,6 @@
           "text_size": "medium",
           "button_label": "Shop now",
           "button_link": "shopify:\/\/collections\/frontpage"
-        }
-      },
-      "featured-collections": {
-        "type": "collection",
-        "settings": {
-          "title": "Featured collection",
-          "collection": "frontpage",
-          "grid": 3,
-          "rows": 2,
-          "show_vendor": false,
-          "show_view_all": true
         }
       },
       "footer": {
@@ -133,7 +122,7 @@
         "type": "collection-template",
         "settings": {
           "layout": "grid",
-          "grid": 4,
+          "grid": 3,
           "rows": 2,
           "show_collection_image": true,
           "show_vendor": false,
@@ -406,10 +395,10 @@
           "section_height": "medium"
         }
       },
-      "1545792231670": {
+      "1545876217640": {
         "type": "collection",
         "settings": {
-          "title": "Featured collection",
+          "title": "Featured collection　apple",
           "collection": "frontpage",
           "grid": 3,
           "rows": 2,
@@ -417,15 +406,12 @@
           "show_view_all": false
         }
       },
-      "1545811899792": {
-        "type": "collection",
+      "list-collections-template": {
+        "type": "list-collections-template",
         "settings": {
-          "title": "collection apple",
-          "collection": "frontpage",
-          "grid": 3,
-          "rows": 2,
-          "show_vendor": false,
-          "show_view_all": false
+          "display_type": "all",
+          "sort": "alphabetical",
+          "grid": 3
         }
       }
     },
@@ -434,10 +420,8 @@
       "hero",
       "1545724779606",
       "1545714467441",
-      "featured-collections",
-      "1545792231670",
-      "1545276791523",
-      "1545811899792"
+      "1545876217640",
+      "1545276791523"
     ]
   },
   "presets": {
@@ -445,7 +429,7 @@
       "color_text": "#3d4246",
       "color_body_text": "#69727b",
       "color_sale_text": "#189dff",
-      "color_borders": "#e8e9eb",
+      "color_borders": "#e6e6e6",
       "color_button": "#189dff",
       "color_button_text": "#fff",
       "color_small_button_text_border": "#3d4246",
