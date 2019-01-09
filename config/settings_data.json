@@ -11,10 +11,10 @@
     "color_text_field": "#fff",
     "color_image_overlay_text": "#fff",
     "color_image_overlay": "#3d4246",
-    "image_overlay_opacity": 40,
+    "image_overlay_opacity": 5,
     "color_borders": "#e8e9eb",
     "color_body_bg": "#fafafa",
-    "type_header_font": "work_sans_n6",
+    "type_header_font": "helvetica_n4",
     "type_header_base_size": 26,
     "type_base_font": "work_sans_n4",
     "type_base_size": 16,
@@ -31,7 +31,7 @@
     "social_snapchat_link": "",
     "social_youtube_link": "",
     "social_vimeo_link": "",
-    "favicon": "",
+    "favicon": "shopify:\/\/shop_images\/cclim-favicon_5e78889d-989b-4160-95ff-47ce5835d2fe.png",
     "checkout_header_image": "",
     "checkout_logo_image": "shopify:\/\/shop_images\/logo_fba759fe-9256-4392-a3df-1993a64a0ad5.png",
     "checkout_logo_position": "left",
@@ -51,8 +51,8 @@
         "type": "header",
         "settings": {
           "align_logo": "left",
-          "logo": "shopify:\/\/shop_images\/logo_fba759fe-9256-4392-a3df-1993a64a0ad5.png",
-          "logo_max_width": 245,
+          "logo": "shopify:\/\/shop_images\/logo-cclim.png",
+          "logo_max_width": 65,
           "main_linklist": "main-menu",
           "message": true,
           "home_page_only": true,
@@ -136,19 +136,14 @@
           "image_size": "medium",
           "show_quantity_selector": true,
           "show_variant_labels": true,
-          "show_vendor": false,
-          "enable_zoom": true,
+          "show_vendor": true,
+          "enable_zoom": false,
           "enable_payment_button": true,
-          "show_share_buttons": true
-        }
-      },
-      "related-products": {
-        "type": "related-products",
-        "settings": {
-          "show_related_products": true,
-          "related_title": "왜 안안나오는데 나와라 제발",
-          "related_grid_num": "4",
-          "related_grid_row": "3"
+          "show_share_buttons": true,
+          "title": "Related Items",
+          "display_related_products": true,
+          "related_products_style": "slider",
+          "related_products_limit": "12"
         }
       },
       "cart-template": {
@@ -188,48 +183,6 @@
           "layout": "list",
           "blog_show_author": true,
           "blog_show_date": true
-        }
-      },
-      "1545276791523": {
-        "type": "logo-bar",
-        "blocks": {
-          "1545276791523-0": {
-            "type": "logo_image",
-            "settings": {
-              "image": "",
-              "link": ""
-            }
-          },
-          "1545276791523-1": {
-            "type": "logo_image",
-            "settings": {
-              "image": "",
-              "link": ""
-            }
-          },
-          "1545276791523-2": {
-            "type": "logo_image",
-            "settings": {
-              "image": "",
-              "link": ""
-            }
-          },
-          "1545276791523-3": {
-            "type": "logo_image",
-            "settings": {
-              "image": "",
-              "link": ""
-            }
-          }
-        },
-        "block_order": [
-          "1545276791523-0",
-          "1545276791523-1",
-          "1545276791523-2",
-          "1545276791523-3"
-        ],
-        "settings": {
-          "title": "Logo list"
         }
       },
       "feature-row": {
@@ -297,34 +250,22 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/blacksuits-header2.jpg",
-              "alignment": "center center",
+              "alignment": "left top",
               "slide_title": "Black suit",
               "subheading": "Pair large text with an image to give focus to your  chosen product, collection, or blog post. Add details on  availability, style, or even provide a review.",
               "button_label": "Shop now",
               "button_link": "shopify:\/\/collections\/all"
             }
-          },
-          "1545714467441-1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/blacksuits-header2.jpg",
-              "alignment": "center center",
-              "slide_title": "Image slide",
-              "subheading": "Pair large text with an image to give focus to your  chosen product, collection, or blog post. Add details on  availability, style, or even provide a review.",
-              "button_label": "",
-              "button_link": ""
-            }
           }
         },
         "block_order": [
-          "1545714467441-0",
-          "1545714467441-1"
+          "1545714467441-0"
         ],
         "settings": {
           "slideshow_height": "small",
           "text_size": "medium",
           "text_alignment": "left bottom",
-          "show_overlay": false,
+          "show_overlay": true,
           "autorotate": true,
           "autorotate_speed": 5
         }
@@ -350,27 +291,27 @@
               "image": "shopify:\/\/shop_images\/1_1024x1024_1024x1024_f45a97d2-5353-4f22-b894-bb2fbf6ca23e.png",
               "alignment": "center",
               "link": "shopify:\/\/collections\/all",
-              "cta_label": "black suits",
+              "cta_label": "Black suits",
               "button_label": "Shop now"
-            }
-          },
-          "1545724921014-1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/2_1024x1024_1024x1024_04989130-1763-4b85-920c-4ab49b532f31.png",
-              "alignment": "center",
-              "link": "shopify:\/\/products\/copy-of-aviator",
-              "cta_label": "sunglasses",
-              "button_label": "shop now"
             }
           },
           "1545724921014-2": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/3_1024x1024_1024x1024_f2064ed8-4d09-45a5-a14b-d97487899210.png",
+              "image": "shopify:\/\/shop_images\/2_1024x1024_1024x1024_04989130-1763-4b85-920c-4ab49b532f31.png",
               "alignment": "center",
               "link": "shopify:\/\/products\/copy-of-copy-of-aviator",
               "cta_label": "glasses",
+              "button_label": "shop now"
+            }
+          },
+          "1545724921014-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/3_1024x1024_1024x1024_f2064ed8-4d09-45a5-a14b-d97487899210.png",
+              "alignment": "center",
+              "link": "shopify:\/\/products\/copy-of-aviator",
+              "cta_label": "sunglasses",
               "button_label": "shop now"
             }
           },
@@ -387,8 +328,8 @@
         },
         "block_order": [
           "1545724921014-0",
-          "1545724921014-1",
           "1545724921014-2",
+          "1545724921014-1",
           "1545724966378"
         ],
         "settings": {
@@ -413,6 +354,22 @@
           "sort": "alphabetical",
           "grid": 3
         }
+      },
+      "1546072319695": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": false,
+          "section_title": "Talk about your brand",
+          "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+          "text_size": "medium"
+        }
+      },
+      "text": {
+        "type": "text",
+        "settings": {
+          "text-box": "Title",
+          "text": "<p>Add your text here<\/p>"
+        }
       }
     },
     "content_for_index": [
@@ -421,7 +378,7 @@
       "1545724779606",
       "1545714467441",
       "1545876217640",
-      "1545276791523"
+      "1546072319695"
     ]
   },
   "presets": {

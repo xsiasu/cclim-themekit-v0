@@ -1330,7 +1330,7 @@ html {
 .section-header {
   margin-bottom: $section-spacing-small;
   @include media-query($medium-up) {
-    margin-bottom: $section-spacing;
+    margin-bottom: 0;
   }
 }
 
@@ -2523,21 +2523,25 @@ textarea {
 .site-nav__dropdown {
   display: none;
   position: absolute;
-  left: 0;
-  padding: 11px 30px 11px 0;
-  margin: 0;
+  width:100%;
+
+  padding: 0;
   z-index: $z-index-dropdown;
   text-align: left;
-  border: 1px solid $color-border;
   background: $color-bg;
-  left: -1px;
   top: 63px;
   .site-nav__link {
     padding: 4px 15px 5px;
   }
   .site-nav--active-dropdown & {
-    width:100%;
+    width: 100%;
     display: block;
+    left: 0;
+    margin-left: 0;
+    top:60px;
+    background:$color-bg;
+    border-bottom:solid 1px #e6e6e6;
+    border-top:solid 1px #e6e6e6
   }
   li {
     display: block;
@@ -2555,11 +2559,11 @@ textarea {
 
 /*================ Child list ================*/
 .site-nav__childlist {
+  width:1200px;
+  margin:0 auto;
   display: block;
-  border-top: 1px solid $color-border;
-  border-bottom: 1px solid $color-border;
   background: $color-bg;
-  padding: 11px 17px;
+  padding: 0;
   text-align: left;
 }
 
@@ -2567,7 +2571,6 @@ textarea {
   @include display-flexbox();
   @include flex-wrap(wrap);
   width: auto;
-  margin-bottom: -15px;
 }
 
 .site-nav__childlist-item {
@@ -3282,6 +3285,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 .product__price,
 .featured-product__price {
   font-size: 1.25em;
+  .price {justify-content:left !important}
 }
 
 .product__policies {
@@ -3593,7 +3597,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   margin-bottom: $gutter-site-mobile;
 
   @include media-query($medium-up) {
-    margin-bottom: $section-spacing-small;
+    margin-bottom: 0;
   }
 }
 
@@ -4887,7 +4891,7 @@ $nav-button-padding: 15px;
   Extends default slick slider styles.
   Extra specificity in selectors is used to override defaults.
 ==============================================================================*/
-$slideshow-height-small: 475px;
+$slideshow-height-small: 300px;
 $slideshow-height-medium: 650px;
 $slideshow-height-large: 775px;
 $slideshow-dot-size: 9px;
@@ -4952,10 +4956,10 @@ $transition-controls-slideshow: color 0.2s $ease-transition, background-color 0.
 }
 
 .slideshow--small {
-  height: $slideshow-height-small - 150;
+  height: $slideshow-height-small;
 
   @include media-query($medium-up) {
-    height: $slideshow-height-small;
+    height: $slideshow-height-small + 150;
   }
 }
 
@@ -5004,7 +5008,7 @@ $transition-controls-slideshow: color 0.2s $ease-transition, background-color 0.
 /*================ Slide images ================*/
 .slideshow__image {
   transition: $transition-image-slideshow;
-  position: absolute;
+  {% comment %} position: absolute; {% endcomment %}
   top: 0;
   left: 0;
   opacity: 0;
@@ -5371,6 +5375,7 @@ $transition-controls-slideshow: color 0.2s $ease-transition, background-color 0.
   margin-bottom: 0;
   font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight:400;
+  justify-content: center;
   @include media-query($small) {
     font-size: em($font-size-base - 1);
   }
@@ -5437,7 +5442,7 @@ $toolbar-height-small: 46px;
   margin-bottom: $gutter-site-mobile;
 
   @include media-query($medium-up) {
-    margin-bottom: $section-spacing;
+    margin-bottom: -1px;
   }
 }
 
@@ -5456,6 +5461,12 @@ $toolbar-height-small: 46px;
 
 .filters-toolbar--has-filter {
   position: relative;
+  .filters-toolbar__item-wrapper .filters-toolbar__item-child {
+    &.item-filter {
+      position:absolute;
+      left:0
+    }
+  }
 
   @include media-query($small) {
     border-bottom: none;
@@ -6223,10 +6234,11 @@ $toolbar-height-small: 46px;
   visibility: hidden;
 }
 
+
+
 .image-bar {
   overflow: hidden;
   margin-top:25px;
-  border: solid 1px #e6e6e6;
   border-radius:3px;
   @include media-query($small) {
     border: 0;
@@ -6245,18 +6257,19 @@ $toolbar-height-small: 46px;
   }
 }
 
+
 .image-bar__link {
   &:hover,
   &:focus {
     .image-bar__overlay::before {
       opacity: $hover-overlay-opacity;
+      // background:-webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%)
     }
   }
 
   &:focus {
     position: relative;
     z-index: 2;
-
     .image-bar__content {
       @include default-focus-ring();
     }
@@ -6312,6 +6325,7 @@ $toolbar-height-small: 46px;
 
 .image-bar__overlay {
   @include overlay;
+  
 }
 .image-bar__text {
   position: absolute;
@@ -6542,7 +6556,7 @@ $toolbar-height-small: 46px;
 
 .product-card {
   position: relative;
-
+  min-height:261px;
   &:hover,
   &:focus-within {
     .product-card__image-wrapper {
@@ -6550,14 +6564,14 @@ $toolbar-height-small: 46px;
     }
 
     .product-card__title {
-      border-bottom-color: $color-text;
+      text-align:center
     }
   }
 }
 
 .product-card__title {
-  border-bottom: 1px solid transparent;
-  display: inline;
+  display: block;
+  text-align:center
 }
 
 /*================ Currency selector ================*/

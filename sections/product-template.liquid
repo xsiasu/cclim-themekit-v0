@@ -239,14 +239,17 @@
     </a>
   </div>
 {% endif %}
+  {% comment %}
+    Get first variant, or deep linked one
+  {% endcomment %}
+
+{% include 'related-products' %}
 
 {% unless product == empty %}
   <script type="application/json" id="ProductJson-{{ section.id }}">
     {{ product | json }}
   </script>
 {% endunless %}
-
-
 
 {% schema %}
 {
@@ -416,7 +419,83 @@
         "pt-BR": "Exibir botões de compartilhamento em redes sociais"
       },
       "default": true
-    }
+    },
+    {
+      "type": "header",
+      "content": "Related products"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "de": "Titel",
+        "en": "Heading",
+        "es": "Título",
+        "fr": "En-tête",
+        "it": "Heading",
+        "ja": "見出し",
+        "pt-BR": "Título"
+      },
+      "default": {
+        "de": "Featured Kategorie",
+        "en": "Related Items",
+        "es": "Colección destacada",
+        "fr": "Collection vedette",
+        "it": "Collezione in evidenza",
+        "ja": "特集コレクション",
+        "pt-BR": "Coleção em destaque"
+      }
+    },        
+    {
+      "type": "checkbox",
+      "id": "display_related_products",
+      "label": "Show related products ([?](http:\/\/support.outofthesandbox.com\/customer\/portal\/articles\/942378-related-products))",
+      "default": true
+    },
+    {
+      "type": "radio",
+      "id": "related_products_style",
+      "label": "Layout",
+      "default": "grid",
+      "options": [
+        {
+          "value": "slider",
+          "label": "Slider"
+        },
+        {
+          "value": "grid",
+          "label": "Grid"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "related_products_limit",
+      "label": "Product limit",
+      "default": "12",
+      "options": [
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "8",
+          "label": "8"
+        },
+        {
+          "value": "12",
+          "label": "12"
+        },
+        {
+          "value": "24",
+          "label": "24"
+        },
+        {
+          "value": "48",
+          "label": "48"
+        }
+      ]
+    }    
   ]
 }
 {% endschema %}

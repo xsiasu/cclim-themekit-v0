@@ -48,7 +48,7 @@
             </div>
 
           {% else %}
-            <ul>
+            <ul class="site-nav__childlist">
               {% for childlink in link.links %}
                 <li>
                   <a href="{{ childlink.url }}" class="site-nav__link site-nav__child-link{% if forloop.last %} site-nav__link--last{% endif %}">

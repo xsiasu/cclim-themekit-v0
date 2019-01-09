@@ -1,4 +1,4 @@
-<div class="grid grid--no-gutters image-bar image-bar--{{ section.settings.section_height }}">
+<div class="grid grid--no-gutters image-bars image-bars--{{ section.settings.section_height }}">
   {% case section.blocks.size %}
     {% when 1 %}
       {%- assign column_size = '' -%}
@@ -14,29 +14,22 @@
     <div class="grid__item {{ column_size }} js" {{ block.shopify_attributes }}>
 
       {% if block.settings.link != blank %}
-        <a class="image-bar__link" href="{{ block.settings.link }}">
-          <div class="image-bar__item box ratio-container lazyload"
-               data-bgset="{% include 'bgset', image: block.settings.image %}"
-               data-sizes="auto"
-               data-parent-fit="cover"
-               style="background-position: {{ block.settings.alignment }}; background-image: url('{{ block.settings.image | img_url: '300x300' }});">
+        <a class="image-bars__link" href="{{ block.settings.link }}">
+          <div class="image-bars__item box ratio-container "">
       {% elsif block.settings.image != blank %}
-        <div class="image-bar__item image-bar__item--{{ block.id }} box ratio-container lazyload"
-             data-bgset="{% include 'bgset', image: block.settings.image %}"
-             data-sizes="auto"
-             data-parent-fit="cover"
-             style="background-position: {{ block.settings.alignment }}; background-image: url('{{ block.settings.image | img_url: '300x300' }});">
+        <div class="image-bars__item image-bars__item--{{ block.id }}">
+             <img class="lazyload" src="{{ block.settings.image | img_url: '300x300' }}">
       {% else %}
-        <div class="image-bar__item">
+        <div class="image-bars__item">
       {% endif %}
-      <div class="image-bar__content{% if block.settings.cta_label != blank or block.settings.link != blank %} image-bar__overlay{% endif %}">
+      <div class="image-bars__content{% if block.settings.cta_label != blank or block.settings.link != blank %} image-bars__overlay{% endif %}">
         {% if block.settings.image == blank %}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         {% endif %}
 
         {% if block.settings.cta_label != blank %}
-          <div class="image-bar__text">
-            <h3 class="image-bar__caption">{{ block.settings.cta_label | escape }}</h3>
+          <div class="image-bars__text">
+            <h3 class="image-bars__caption">{{ block.settings.cta_label | escape }}</h3>
           </div>
         {% endif %}
       </div>
@@ -48,7 +41,7 @@
     </div>
     <noscript>
       <div class="grid__item {{ column_size }}" {{ block.shopify_attributes }}>
-        <div class="image-bar__item image-bar__item--{{ block.id }}" style="background-image: url({{ block.settings.image | img_url: '2048x' }});"></div>
+        <div class="image-bars__item image-bars__item--{{ block.id }}" style="background-image: url({{ block.settings.image | img_url: '2048x' }});"></div>
       </div>
     </noscript>
   {% endfor %}
@@ -176,58 +169,6 @@
             "ja": "画像",
             "pt-BR": "Imagem"
           }
-        },
-        {
-          "type": "select",
-          "id": "alignment",
-          "label": {
-            "de": "Fotoausrichtung",
-            "en": "Image alignment",
-            "es": "Alineación de imagen",
-            "fr": "Alignement de l'image",
-            "it": "Allineamento immagine",
-            "ja": "画像アラインメント",
-            "pt-BR": "Alinhamento da imagem"
-          },
-          "default": "center",
-          "options": [
-            {
-              "value": "top",
-              "label": {
-                "de": "Oben",
-                "en": "Top",
-                "es": "Superior",
-                "fr": "Haut",
-                "it": "Alto",
-                "ja": "上",
-                "pt-BR": "Acima"
-              }
-            },
-            {
-              "value": "center",
-              "label": {
-                "de": "Mitte",
-                "en": "Middle",
-                "es": "Centrada",
-                "fr": "Milieu",
-                "it": "Centrale",
-                "ja": "中央",
-                "pt-BR": "Meio"
-              }
-            },
-            {
-              "value": "bottom",
-              "label": {
-                "de": "Unten",
-                "en": "Bottom",
-                "es": "Inferior",
-                "fr": "Bas",
-                "it": "Basso",
-                "ja": "下",
-                "pt-BR": "Abaixo"
-              }
-            }
-          ]
         },
         {
           "type": "url",

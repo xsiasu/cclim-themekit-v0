@@ -81,7 +81,7 @@
 
     {% if is_filter_by_available or section.settings.sort_enable %}
       <div class="filters-toolbar-wrapper{% if is_filter_by_available %} filters-toolbar--has-filter{% endif %}">
-        <div class="page-width">
+        <div class="page-width-filter">
           <div class="filters-toolbar">
             <div class="filters-toolbar__item-wrapper">
               {% if section.settings.tags_enable and is_vendor_or_type_collection == false %}
@@ -117,8 +117,8 @@
                   {%- comment -%}
                   pc
                   {%- endcomment -%}
-                  <div class="filters-toolbar__item-child small--hide">
-                    <button class="filters-toolbar__button">Filter</button>
+                  <div class="filters-toolbar__item-child item-filter small--hide">
+                    <button class="filters-toolbar__button on">Filter</button>
                   </div>
 
 
@@ -444,7 +444,14 @@
 
     
     jQuery('.filters-toolbar__button').click(function(){
+
       let target = jQuery('.page-width-filter');
-      $(this).toggleClass( "active" );
+     
+      if ($(this).hasClass('on')) {
+          $(this).removeClass('on').addClass('off'))
+      } else {
+          $(this).addClass('on'.removeClass('off'))
+      }
+      
     })
 </script>

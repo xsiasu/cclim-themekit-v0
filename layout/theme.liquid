@@ -71,6 +71,8 @@
   <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
+  <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
+
 
   {{ content_for_header }}
   
@@ -126,6 +128,9 @@
     <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
   </ul>
 
-<!-- Delete the Beeketing script below after uninstalling Happy Messenger app to remove it from your theme. For more info, read here: https://bit.ly/hmesscode or contact us at hi@beeketing.com. --><!-- BEEKETINGSCRIPT CODE START -->{% include 'bk-tracking' %}<!-- BEEKETINGSCRIPT CODE END --></body>
+<!-- Delete the Beeketing script below after uninstalling Happy Messenger app to remove it from your theme. For more info, read here: https://bit.ly/hmesscode or contact us at hi@beeketing.com. --><!-- BEEKETINGSCRIPT CODE START -->{% include 'bk-tracking' %}<!-- BEEKETINGSCRIPT CODE END -->
+
+
+</body>
 
 </html>
